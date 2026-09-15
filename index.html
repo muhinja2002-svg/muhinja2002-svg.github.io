@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rawlings Muhinja — Credit Risk & Financial Disclosure Analytics</title>
+<meta name="description" content="Independent verification and reconciliation of financial disclosures — SACCOs, banking, and public institutions.">
+<meta property="og:title" content="Rawlings Muhinja — Credit Risk & Financial Disclosure Analytics">
+<meta property="og:description" content="Independent verification and reconciliation of financial disclosures — SACCOs, banking, and public institutions.">
+<meta property="og:image" content="https://muhinja2002-svg.github.io/og-image.png">
+<meta property="og:url" content="https://muhinja2002-svg.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rawlings Muhinja — Credit Risk & Financial Disclosure Analytics">
+<meta name="twitter:description" content="Independent verification and reconciliation of financial disclosures — SACCOs, banking, and public institutions.">
+<meta name="twitter:image" content="https://muhinja2002-svg.github.io/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F7F3;
+    --ink:#171B24;
+    --slate:#5B6472;
+    --flag:#B8722E;
+    --ok:#2C6E49;
+    --hair:#DCDBD3;
+    --paper-raised:#FDFDFB;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--ink);}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--flag);
+    outline-offset:3px;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  header.nav{
+    padding:28px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  header.nav .name{
+    font-family:'Spectral',serif;
+    font-size:1.05rem;
+    font-weight:600;
+  }
+  header.nav nav a{
+    text-decoration:none;
+    color:var(--slate);
+    font-size:0.92rem;
+    margin-left:22px;
+  }
+  header.nav nav a:hover{color:var(--ink);}
+  header.nav nav a:first-child{margin-left:0;}
+
+  .social-strip{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    padding-bottom:20px;
+    margin-bottom:8px;
+  }
+  .social-strip a{
+    font-size:0.82rem;
+    color:var(--slate);
+    text-decoration:none;
+  }
+  .social-strip a:hover{color:var(--ink);}
+
+  /* HERO */
+  .hero{
+    padding:36px 0 56px;
+  }
+  .hero h1{
+    font-family:'Spectral',serif;
+    font-weight:500;
+    font-size:clamp(1.6rem, 3.4vw, 2.15rem);
+    line-height:1.32;
+    max-width:24ch;
+    margin:0 0 40px;
+  }
+  .recon-strip{
+    border:1px solid var(--hair);
+    background:var(--paper-raised);
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    padding:22px 20px;
+    gap:14px;
+  }
+  .recon-cell{ }
+  .recon-cell .label{
+    font-size:0.78rem;
+    color:var(--slate);
+    margin:0 0 6px;
+  }
+  .recon-cell .fig{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:clamp(1.4rem, 4vw, 1.9rem);
+    opacity:0;
+    transform:translateY(6px);
+    animation:settle 0.7s ease-out forwards;
+  }
+  .recon-cell.reported .fig{color:var(--ink); animation-delay:0.1s;}
+  .recon-cell.verified .fig{color:var(--ok); animation-delay:0.55s;}
+  .recon-cell .sub{
+    font-size:0.82rem;
+    color:var(--slate);
+    margin-top:4px;
+  }
+  .recon-mark{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--ok);
+    font-size:1.1rem;
+    opacity:0;
+    animation:settle 0.5s ease-out forwards;
+    animation-delay:1s;
+  }
+  @keyframes settle{
+    to{opacity:1; transform:translateY(0);}
+  }
+  .recon-source{
+    font-size:0.8rem;
+    color:var(--slate);
+    margin-top:10px;
+  }
+
+  section{
+    padding:44px 0;
+    border-top:1px solid var(--hair);
+  }
+  section h2{
+    font-family:'Spectral',serif;
+    font-weight:500;
+    font-size:1.3rem;
+    margin:0 0 18px;
+  }
+  section p{
+    margin:0 0 14px;
+    max-width:66ch;
+  }
+  .lede{
+    color:var(--ink);
+  }
+
+  .method-list{
+    counter-reset:step;
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .method-list li{
+    counter-increment:step;
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--hair);
+  }
+  .method-list li:first-child{border-top:none;}
+  .method-list li::before{
+    content:counter(step);
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--flag);
+    font-size:0.95rem;
+    padding-top:2px;
+  }
+  .method-list h3{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.98rem;
+    margin:0 0 4px;
+  }
+  .method-list p{margin:0; color:var(--slate); font-size:0.92rem;}
+
+  .sector-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.76rem;
+    color:var(--slate);
+    letter-spacing:0.02em;
+    margin:22px 0 0;
+  }
+  .case:has(+ .sector-label), section#work > .case:last-of-type{margin-bottom:0;}
+
+  .case{
+    padding:20px 0;
+    border-top:1px solid var(--hair);
+  }
+  .case:first-of-type{border-top:none; padding-top:0;}
+  .case-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .case h3{
+    font-family:'Spectral',serif;
+    font-weight:500;
+    font-size:1.08rem;
+    margin:0;
+  }
+  .status{
+    font-size:0.78rem;
+    padding:3px 9px;
+    border:1px solid var(--hair);
+    white-space:nowrap;
+  }
+  .status.live{color:var(--ok); border-color:var(--ok);}
+  .status.pending{color:var(--flag); border-color:var(--flag);}
+  .case p{margin:8px 0 10px; font-size:0.95rem;}
+  .case .links a{
+    font-size:0.88rem;
+    margin-right:16px;
+    text-decoration:underline;
+    text-decoration-color:var(--hair);
+    text-underline-offset:3px;
+  }
+  .case .links a:hover{text-decoration-color:var(--ink);}
+
+  .creds{
+    display:grid;
+    gap:14px;
+  }
+  .cred{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:14px;
+    font-size:0.94rem;
+  }
+  .cred .when{color:var(--slate); font-family:'IBM Plex Mono',monospace; font-size:0.85rem;}
+
+  footer{
+    padding:40px 0 60px;
+    border-top:1px solid var(--hair);
+    font-size:0.92rem;
+    color:var(--slate);
+  }
+  footer a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--hair);}
+  footer a:hover{text-decoration-color:var(--ink);}
+
+  @media (max-width:560px){
+    .recon-strip{grid-template-columns:1fr; text-align:left;}
+    .recon-mark{justify-self:start; padding:6px 0;}
+    .cred{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="nav">
+    <span class="name">Rawlings Muhinja</span>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#method">Method</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="social-strip">
+    <a href="https://www.linkedin.com/in/rawlings-muhinja" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://rawlingsmuhinja.substack.com" target="_blank" rel="noopener">Substack</a>
+    <a href="https://medium.com/@rawlingsmuhinja" target="_blank" rel="noopener">Medium</a>
+    <a href="https://github.com/muhinja2002-svg" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:muhinja2002@gmail.com">Email</a>
+  </div>
+
+  <section class="hero" style="border-top:none; padding-top:0;">
+    <h1>I verify whether the financial numbers institutions publish are actually true.</h1>
+
+    <div class="recon-strip">
+      <div class="recon-cell reported">
+        <p class="label">Reported</p>
+        <p class="fig">17.1%</p>
+        <p class="sub">Co-op Bank, disclosed NPL ratio</p>
+      </div>
+      <div class="recon-mark">→ 14.5% ✓</div>
+      <div class="recon-cell verified">
+        <p class="label">Verified</p>
+        <p class="fig">Reconciled</p>
+        <p class="sub">Independently recomputed, confirmed genuine</p>
+      </div>
+    </div>
+    <p class="recon-source">From an independent reconciliation of Co-operative Bank of Kenya's NPL trajectory — full method below.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p class="lede">I independently reconcile institution-reported financial figures against regulator and primary-source data — closing information gaps the public can't otherwise see.</p>
+    <p>I started with SACCOs: a data-rich, under-scrutinized sector where I could build real rigor before I had institutional access. I'm working toward banking and fintech, where the same discipline carries more weight. Based in Nairobi, currently studying Economics and Data Analytics at Mount Kenya University.</p>
+  </section>
+
+  <section id="method">
+    <h2>Method</h2>
+    <ol class="method-list">
+      <li>
+        <div>
+          <h3>Source</h3>
+          <p>Start only from what's already public — regulatory filings, audited disclosures, government reports. No leaked or unverifiable data.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Reconcile</h3>
+          <p>Cross-reference every figure against the institution's own other disclosures, and against independent regulatory data where it exists.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Recompute</h3>
+          <p>Rebuild the arithmetic from source numbers rather than trusting a summary figure. If it doesn't reconcile, that's the finding.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Disclose</h3>
+          <p>State plainly what matched, what didn't, and what couldn't be verified at all. An unresolved figure is reported as unresolved, not rounded to a clean story.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="work">
+    <h2>Work</h2>
+
+    <p class="sector-label">Banking</p>
+    <div class="case">
+      <div class="case-top">
+        <h3>Co-operative Bank of Kenya — NPL Trajectory Reconciliation</h3>
+        <span class="status live">Live</span>
+      </div>
+      <p>Independently reconstructed and verified three years of non-performing loan disclosures against Co-op Bank's public filings.</p>
+      <div class="links">
+        <a href="https://rawlingsmuhinja.substack.com/p/co-op-banks-npl-ratio-fell-from-171" target="_blank" rel="noopener">Read on Substack</a>
+        <a href="verify-coop-bank.html">How we verified this</a>
+      </div>
+    </div>
+
+    <p class="sector-label">Utilities</p>
+    <div class="case">
+      <div class="case-top">
+        <h3>Kenya Power — Auditor-General Reconciliation</h3>
+        <span class="status live">Live</span>
+      </div>
+      <p>Reconciled four consecutive years of Auditor-General findings on Kenya Power against the company's own shareholder narrative, including a flagged receivable balance never reflected to shareholders.</p>
+      <div class="links">
+        <a href="https://rawlingsmuhinja.substack.com/p/kenya-powers-auditor-flagged-a-kshs" target="_blank" rel="noopener">Read on Substack</a>
+        <a href="https://medium.com/@rawlingsmuhinja/kenya-powers-auditor-flagged-a-kshs-34-5-billion-receivable-shareholders-never-saw-the-number-062842f2fca9" target="_blank" rel="noopener">Read on Medium</a>
+        <a href="verify-kenya-power.html">How we verified this</a>
+      </div>
+    </div>
+
+    <p class="sector-label">SACCO</p>
+    <div class="case">
+      <div class="case-top">
+        <h3>SACCO Sector — NPL & Delinquency Comparison</h3>
+        <span class="status pending">In progress</span>
+      </div>
+      <p>Comparing self-reported NPL and delinquency figures against SASRA-published data across four Kenyan deposit-taking SACCOs.</p>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Credentials</h2>
+    <div class="creds">
+      <div class="cred">
+        <span class="when">Ongoing</span>
+        <span>Economics &amp; Data Analytics (undergraduate) — Mount Kenya University</span>
+      </div>
+      <div class="cred">
+        <span class="when">Certificate</span>
+        <span>AI-Powered Data Analysis — Rochester Institute of Technology (via Excelerate/Vempower)</span>
+      </div>
+      <div class="cred">
+        <span class="when">Certificate</span>
+        <span>Data Visualization Star Performer — Saint Louis University (via Forage)</span>
+      </div>
+      <div class="cred">
+        <span class="when">Certificate</span>
+        <span>Data Analytics Job Simulation — Deloitte Australia (via Forage)</span>
+      </div>
+    </div>
+    <p style="margin-top:16px;"><a href="Rawlings-Muhinja-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></p>
+  </section>
+
+  <section id="writing">
+    <h2>Writing</h2>
+    <p>Case studies and reconciliations are published first on Substack, then cross-posted to Medium.</p>
+    <div class="links">
+      <a href="https://rawlingsmuhinja.substack.com" target="_blank" rel="noopener">Substack — The Reconciliation</a><br>
+      <a href="https://medium.com/@rawlingsmuhinja" target="_blank" rel="noopener" style="display:inline-block; margin-top:8px;">Medium</a>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Open to roles and collaborations in credit risk analytics and financial disclosure review — remote or Nairobi-based.</p>
+    <p>
+      <a href="mailto:muhinja2002@gmail.com">muhinja2002@gmail.com</a><br>
+      <a href="https://www.linkedin.com/in/rawlings-muhinja" target="_blank" rel="noopener">LinkedIn</a><br>
+      <a href="https://github.com/muhinja2002-svg" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
